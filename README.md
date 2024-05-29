@@ -1,5 +1,7 @@
+![Uploading image.png…]()
+
 #### 介绍
-这是一个本地的可部署在web端的用户管理
+这是一个本地的可部署在web端的用户管理界面
 技术：flask，request
 
 #### 项目特色
@@ -11,3 +13,4 @@ pip install flask,request
 
 #### 使用方法
 运行main.py，点击跳转的网页即可
+
