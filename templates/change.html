@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>change</title>
+      <link rel="stylesheet" href="/static/css/layui.css">
+</head>
+<body style="margin: 300px auto;width:500px;height:400px ">
+<form class="layui-form" action="/changed/{{user.username}}" method="post">
+    <div class="demo-login-container">
+<div class="layui-form-item" >
+    <div class="layui-input-group">
+      <div class="layui-input-split layui-input-prefix">
+        用户名
+      </div>
+      <input type="text" name="username" placeholder="请输入用户名" class="layui-input" value="{{user.username}}">
+    </div>
+  </div>
+<div class="layui-form-item">
+    <div class="layui-input-group">
+      <div class="layui-input-split layui-input-prefix">
+        薪水
+      </div>
+      <input type="number" name="salary" placeholder="请输入薪水" class="layui-input" value="{{user.salary}}">
+    </div>
+  </div>
+<div class="layui-form-item">
+    <div class="layui-input-group">
+      <div class="layui-input-split layui-input-prefix">
+        部门
+      </div>
+      <input type="text" name="department" placeholder="请输入部门" class="layui-input"  value="{{user.department}}">
+    </div>
+  </div>
+<div class="layui-form-item">
+    <div class="layui-input-group">
+      <div class="layui-input-split layui-input-prefix">
+        职位
+      </div>
+      <input type="text" name="position" placeholder="请输入职位" class="layui-input"  value="{{user.position}}">
+    </div>
+  </div>
+<div class="layui-form-item">
+    <div class="layui-input-group">
+      <div class="layui-input-split layui-input-prefix">
+        密码
+      </div>
+      <input type="password" name="password" placeholder="请输入密码" class="layui-input"  value="{{user.password}}">
+    </div>
+  </div>
+<div class="layui-form-item">
+    <div class="layui-input-group">
+      <div class="layui-input-split layui-input-prefix">
+        授权等级
+      </div>
+      <input type="number" name="level" placeholder="请输入授权等级" class="layui-input"  value="{{user.level}}">
+    </div>
+</div>
+<button  lay-submit lay-filter="demo-login" class="layui-btn layui-btn-fluid">提交</button>
+
+</div>
+</form>
+</div>
+<script src="/static/layui.js"></script>
+<script>
+   layui.use('form',function(){
+  var form = layui.form;
+  var layer = layui.layer;
+</script>
+
+</body>
+</html>

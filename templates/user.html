@@ -1,0 +1,89 @@
+<!--次级管理员登录界面-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>管理员界面</title>
+  <link rel="stylesheet" href="/static/css/layui.css">
+</head>
+<body>
+<ul class="layui-nav">
+  <li class="layui-nav-item" lay-unselect>
+    <a href="javascript:;">
+      <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="layui-nav-img">
+    </a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:;">用户名</a></dd>
+      <dd><a href="javascript:;">组织</a></dd>
+        <dd><a href="javascript:;">部门</a></dd>
+        <dd><a href="javascript:;">职位</a></dd>
+      <hr>
+      <dd style="text-align: center;"><a href="https://www.simtech-sh.com/">帮助</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item">
+    <a href="">登录成功，你好管理员<span class="layui-badge-dot"></span></a>
+  </li>
+</ul>
+
+<div class="layui-tab layui-tab-card">
+    <!--      总标签-->
+  <ul class="layui-tab-title">
+    <li class="layui-this">用户管理</li>
+    <li>标签2</li>
+    <li>标签3</li>
+    <li>标签4</li>
+    <li>标签5</li>
+  </ul>
+  <div class="layui-tab-content">
+<!--      标签1的内容1-->
+    <div class="layui-tab-item layui-show">
+    <table class="layui-table">
+  <colgroup>
+    <col width="150">
+    <col width="150">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+<!--        渲染列头-->
+      <th Lay-data="{field:username}">用户名</th>
+      <th Lay-data="{field:organization}">组织</th>
+      <th Lay-data="{field:department}">岗位</th>
+        <th Lay-data="{field:position}">职位</th>
+        <th Lay-data="{field:password}">密码</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <tr>
+      <td>李小明</td>
+      <td>上海工程技术大学</td>
+      <td>物流管理专业</td>
+      <td>学生</td>
+      <td>admin</td>
+    </tr>
+
+  {% for sal in customers %}
+  <tr>
+      <td>{{sal.username}}</td>
+      <td>{{sal.organization}}</td>
+      <td>{{sal.department}}</td>
+      <td>{{sal.position}}</td>
+      <td>{{sal.password}}</td>
+    </tr>
+   {% endfor %}
+  </tbody>
+</table>
+    </div>
+    <div class="layui-tab-item">内容-2</div>
+    <div class="layui-tab-item">内容-3</div>
+    <div class="layui-tab-item">内容-4</div>
+    <div class="layui-tab-item">内容-5</div>
+  </div>
+</div>
+<script src="/static/layui.js"></script>
+
+</body>
+</html>
